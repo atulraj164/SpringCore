@@ -6,9 +6,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import dto.Employe;
+/*
+	creating application context and configuration  class
+	using anotaions @Configuration
+@ComponentScan @Component 
 
-
-
+*/
 @Configuration
 @ComponentScan(basePackages={"Dto","coreTechnology"})
 public class MyApplicationConfiguration {
@@ -17,6 +20,8 @@ public class MyApplicationConfiguration {
 			AnnotationConfigApplicationContext(MyApplicationConfiguration.class);
 	
 	public static void main(String[] args) {
+
+		//solving same spring bean contains in iioc container problem using @Component(value="givenname)
 		Employe emp=(Employe) context.getBean("employe");
 		coreTechnology.Employe emp2=(coreTechnology.Employe)context.getBean("coreemp");
 	    emp.getEmploye();
