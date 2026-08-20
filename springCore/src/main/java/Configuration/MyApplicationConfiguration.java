@@ -21,7 +21,7 @@ public class MyApplicationConfiguration {
 	
 	public static void main(String[] args) {
 
-		//solving same spring bean contains in iioc container problem using @Component(value="givenname)
+		//solving same spring bean contains in iioc container problem name conflict using @Component(value="givenname)
 		Employe emp=(Employe) context.getBean("employe");
 		coreTechnology.Employe emp2=(coreTechnology.Employe)context.getBean("coreemp");
 	    emp.getEmploye();
