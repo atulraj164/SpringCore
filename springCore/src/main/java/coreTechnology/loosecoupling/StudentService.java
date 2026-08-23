@@ -5,11 +5,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
+
+	//types of dependency injection
 	
-    @Autowired
+ /*  FIELD INJECTION
+     @Autowired
 	StudentDao dao;
-	
-	
+	*/
 	public void getName() {
 		dao.getName();
 	}
