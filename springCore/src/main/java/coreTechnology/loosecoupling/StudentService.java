@@ -8,10 +8,22 @@ public class StudentService {
 
 	//types of dependency injection
 	
- /*  FIELD INJECTION
+ /*  FIELD INJECTION-1
      @Autowired
 	StudentDao dao;
 	*/
+	
+	//CONSTRUCTOR INJECTION-2
+		@Autowired 
+    	public StudentService(StudentDao dao,SubjectDao sdao) {
+		this.dao=dao;
+		this.sdao=sdao;
+		
+	}
+		public void getSubject() {
+		sdao.getSubject();
+	}
+
 	public void getName() {
 		dao.getName();
 	}
