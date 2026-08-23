@@ -14,12 +14,20 @@ public class StudentService {
 	*/
 	
 	//CONSTRUCTOR INJECTION-2
-		@Autowired 
+	/*	@Autowired 
     	public StudentService(StudentDao dao,SubjectDao sdao) {
 		this.dao=dao;
 		this.sdao=sdao;
 		
 	}
+*/
+		//Setter INJECTION-3
+	@Autowired
+	public void injectDependencies(StudentDao dao,SubjectDao sdao) {
+		this.dao=dao;
+		this.sdao=sdao;
+	}
+	
 		public void getSubject() {
 		sdao.getSubject();
 	}
